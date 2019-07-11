@@ -1,0 +1,63 @@
+name = "base-rhel8"
+description = "General purpose RHEL8 deployment."
+version = "0.0.3"
+modules = []
+groups = []
+
+[[packages]]
+name = "git"
+version = "*"
+
+[[packages]]
+name = "libguestfs-tools"
+version = "*"
+
+[[packages]]
+name = "net-tools"
+version = "*"
+
+[[packages]]
+name = "open-vm-tools"
+version = "*"
+
+[[packages]]
+name = "openssh"
+version = "*"
+
+[[packages]]
+name = "openssh-server"
+version = "*"
+
+[[packages]]
+name = "sudo"
+version = "*"
+
+[[packages]]
+name = "tar"
+version = "*"
+
+[[packages]]
+name = "unzip"
+version = "*"
+
+[[packages]]
+name = "xz"
+version = "*"
+
+[[customizations.user]]
+name = "cloud-user"
+description = "cloud-user user account"
+password = "$6$2QX9lhu1Fb1IWSxx$IyW27O8Lc3.c1YFXZYCfwnIplzIn43mqMg9qzNwp0tRrLNhLAutvvW1DlCUDOXX2YrlMWvLEFoPPtC.FG78QT/"
+key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTcRiMEulKlNUqpy6Kb2wIAe6mKbdeZxUZIDll+MmcPa814fJIY0agGyFdQxQqgL1bQwU6e7OPD5IMsUIHeah0w3lWwxKZ7d4so/OE6BQVKmNOMepBygcr7EvQxkHC2kbp9wshc6m8rnuEnwKOr4nonwpKH6s4ok9Xf9IYimN4ovCQUYh9f0V7e1Y/KP9wqJqeWHZOpmICY+LTPi9JFGOT8aWEbFHHPvqYqzf0pJKrJnBreG6FBVCgam4ve/LbWql/1/nJDHY0V7dwBwopVXJUU27E68je70s7zYavsdZwESUmuhgG2cE0zM8rZY2ynZth+8AgtiHCgov88c2x9jSp shifti.us"
+home = "/home/cloud-user/"
+shell = "/usr/bin/bash"
+groups = ["users", "wheel"]
+
+[[customizations.user]]
+name = "root"
+description = "root user account"
+password = "$6$2QX9lhu1Fb1IWSxx$IyW27O8Lc3.c1YFXZYCfwnIplzIn43mqMg9qzNwp0tRrLNhLAutvvW1DlCUDOXX2YrlMWvLEFoPPtC.FG78QT/"
+key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTcRiMEulKlNUqpy6Kb2wIAe6mKbdeZxUZIDll+MmcPa814fJIY0agGyFdQxQqgL1bQwU6e7OPD5IMsUIHeah0w3lWwxKZ7d4so/OE6BQVKmNOMepBygcr7EvQxkHC2kbp9wshc6m8rnuEnwKOr4nonwpKH6s4ok9Xf9IYimN4ovCQUYh9f0V7e1Y/KP9wqJqeWHZOpmICY+LTPi9JFGOT8aWEbFHHPvqYqzf0pJKrJnBreG6FBVCgam4ve/LbWql/1/nJDHY0V7dwBwopVXJUU27E68je70s7zYavsdZwESUmuhgG2cE0zM8rZY2ynZth+8AgtiHCgov88c2x9jSp shifti.us"
+home = "/root/"
+shell = "/usr/bin/bash"
+groups = ["users", "wheel"]
